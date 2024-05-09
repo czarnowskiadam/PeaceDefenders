@@ -1,8 +1,6 @@
 from imports import *
 
-def animate_sprites(sprite, frame_w, frame_h, rows, cols, ):
-    rows = 1
-    cols = 8
+def animate_sprites(sprite, frame_w, frame_h, rows, cols):
     total_frames = rows * cols
 
     frame_index = 0
@@ -16,8 +14,8 @@ def animate_sprites(sprite, frame_w, frame_h, rows, cols, ):
 
     return frames, total_frames, frame_index, frame_countdown
 
-def update_sprites(screen, frames, total_frames, frame_index, frame_countdown):
-    screen.blit(frames[frame_index], (450, 550))
+def update_sprites(screen, frames, total_frames, frame_index, frame_countdown, pos):
+    screen.blit(frames[frame_index], pos)
     frame_countdown -= 1
     if frame_countdown == 0:
         frame_index = (frame_index + 1) % total_frames

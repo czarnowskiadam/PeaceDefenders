@@ -1,12 +1,12 @@
 from imports import *
 
 class Button(object):
-    def __init__(self, screen, position, button_on_image_path, button_off_image_path, text, text_size, text_color):
+    def __init__(self, screen, position, button_on_image, button_off_image, text, text_size, text_color):
 
         self.screen = screen
         self.position = position
-        self.button_on_image = pygame.image.load(button_on_image_path)
-        self.button_off_image = pygame.image.load(button_off_image_path)
+        self.button_on_image = button_on_image
+        self.button_off_image = button_off_image
         self.current_image = self.button_on_image
         self.text = text
         self.font = pygame.font.Font('font/daydream.ttf', text_size)
