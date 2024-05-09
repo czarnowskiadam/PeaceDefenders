@@ -19,7 +19,7 @@ class Button(object):
         self.screen.blit(self.current_image, self.position)
         button_text = pygame.font.Font.render(self.font, self.text, True, self.text_color)
         text_rect = button_text.get_rect(center=(self.position[0] + self.button_on_image.get_width() / 2,
-                                                   self.position[1] + self.button_on_image.get_height() / 2 - 5))
+                                                   self.position[1] + self.button_on_image.get_height() / 2 - 3))
         self.screen.blit(button_text, text_rect)
 
     def click(self, status):
