@@ -37,7 +37,7 @@ logo_sprite = pygame.image.load("assets/logo/logo.png")
 frame_width, frame_height = 900, 300
 options_stats_menu_image = pygame.image.load("assets/menu/options_stats.png")
 button_image_on_path = 'assets/buttons/button208x48xON.png'
-button_image_off_path = 'assets/buttons/button208x48xOFF.png'
+button_image_off_path = 'assets/buttons/button208x48xOFF1.png'
 button_on_image = pygame.image.load(button_image_on_path)
 button_off_image = pygame.image.load(button_image_off_path)
 
