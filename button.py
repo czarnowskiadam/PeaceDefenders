@@ -1,9 +1,10 @@
 from imports import *
 
 class Button(object):
-    def __init__(self, screen, position, button_on_image, button_off_image, text, text_size, text_color):
+    def __init__(self, screen, scale_factor, position, button_on_image, button_off_image, text, text_size, text_color):
 
         self.screen = screen
+        self.scale_factor = scale_factor
         self.position = position
         self.button_on_image = button_on_image
         self.button_off_image = button_off_image
@@ -24,7 +25,8 @@ class Button(object):
 
     def click(self, status):
         mouse_pos = pygame.mouse.get_pos()
-        image_rect = self.current_image.get_rect(topleft=self.position)
+        scaled_pos = (self.position[0] * self.scale_factor, self.position[1] * self.scale_factor)
+        image_rect = self.current_image.get_rect(topleft=scaled_pos)
         if image_rect.collidepoint(mouse_pos) and status:
             self.current_image = self.button_off_image
             return True
